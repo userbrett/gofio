@@ -1,0 +1,53 @@
+# Config file for the scripts
+#
+# config.txt
+# ver 0.02
+#
+# Purpose:
+# To provide a central place for configuration of the test suite.
+#
+# Changelog:
+# v0.02 - added this config file.
+#
+# ##
+
+
+# Number of times to loop through the test suite.
+# Time stamp in the name of the file prevents overwriting existing data.
+ITERATIONS=1
+
+
+# Write where?
+# Note:  These settings will result in /scratch/one and /scratch/two
+# BASEDIR=/scratch
+# DATADIRS="one two"
+BASEDIR=/scratch
+DATADIRS="one two"
+
+
+# Blocksize
+BS="4k 16k 1m 64m"
+
+
+# IO type
+IOTYPE="read write randread randwrite"
+
+
+# DIRECT IO
+# 0 = no, 1 = Yes, "0 1" = both
+DIRECTIO="1"
+
+
+# IO engine (sync, libaio)
+IOENGINE="libaio"
+
+
+# IO depth
+# IODEPTH="2 4 8 16 32 64 96 128"
+IODEPTH="32 64 96 128"
+
+
+# Max RPC's in flight (Lustre)
+MAXRPC="8 16 24 32"
+
+
